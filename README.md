@@ -43,3 +43,45 @@ Concrete Builders
 Concrete builders implement the IBuilder interface to construct and assemble the parts of the Computer object.
 
 GamingComputerBuilder
+
+
+internal class GamingComputerBuilder : IBuilder
+{
+    private Computer computer;
+
+    public GamingComputerBuilder()
+    {
+        computer = new Computer();
+    }
+
+    public void StartUpOperations()
+    {
+        // Initialize or reset the computer object if needed
+        computer = new Computer();
+    }
+
+    public void BuildCPU()
+    {
+        computer.CPU = "High-end Gaming CPU";
+    }
+
+    public void BuildGPU()
+    {
+        computer.GPU = "High-end Gaming GPU";
+    }
+
+    public void BuildRAM()
+    {
+        computer.RAM = "32GB Gaming RAM";
+    }
+
+    public void BuildStorage()
+    {
+        computer.Storage = "1TB NVMe SSD";
+    }
+
+    public Computer GetComputer()
+    {
+        return computer;
+    }
+}
