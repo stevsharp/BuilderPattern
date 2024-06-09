@@ -25,3 +25,21 @@ internal class Computer
         return $"CPU: {CPU}, GPU: {GPU}, RAM: {RAM}, Storage: {Storage}";
     }
 }
+
+IBuilder
+The IBuilder interface declares the methods for creating the parts of the Computer object.
+
+public interface IBuilder
+{
+    void StartUpOperations();
+    void BuildCPU();
+    void BuildGPU();
+    void BuildRAM();
+    void BuildStorage();
+    Computer GetComputer();
+}
+
+Concrete Builders
+Concrete builders implement the IBuilder interface to construct and assemble the parts of the Computer object.
+
+GamingComputerBuilder
