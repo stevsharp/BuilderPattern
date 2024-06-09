@@ -44,7 +44,6 @@ Concrete builders implement the IBuilder interface to construct and assemble the
 
 GamingComputerBuilder
 
-
 internal class GamingComputerBuilder : IBuilder
 {
     private Computer computer;
@@ -131,7 +130,6 @@ internal class OfficeComputerBuilder : IBuilder
 Manager
 The Manager class directs the construction process using the builder interface.
 
-
 internal class Manager
 {
     protected readonly IBuilder builder;
@@ -182,8 +180,7 @@ class Program
 
 Sure, here's a README.md file for your Builder Pattern project:
 
-markdown
-Copy code
+markdown Copy code
 # Builder Pattern Example
 
 This repository contains an example implementation of the Builder Pattern in C#. The Builder Pattern is a design pattern that separates the construction of a complex object from its representation, allowing the same construction process to create different representations.
